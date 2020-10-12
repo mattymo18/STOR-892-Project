@@ -5,3 +5,4 @@
 Scratch_Work.Rmd
 .rstudio/*
 .local/*git rm
+Source-Data/*.csv
