@@ -1,7 +1,20 @@
-Introduction
-============
+NFL Draft Analysis
+==================
 
-Predicting career added value from college and combine statistics to decide which players to take in NFL Draft. 
+Introduction
+------------
+
+This prject will use college statistics and nfl combine data to predict a players career added value statistic. This statistics is taken from pro-football-reference.com and is useful for assesing a players career regardless of the position played. This single number takes all contributions made by the player into account, the higher career added value a player has the better they were during their entire career in the NFL.
+
+Using this model, general managers can predict incoming players value and decide who to take in the draft.
+
+Data
+----
+
+Data is taken from and analysis previously done by Sean J. Taylor found here: https://seanjtaylor.github.io/learning-the-draft/ <br />
+Specifically the cleaned dataset "training" is used in this analysis. 
+
+
 
 USAGE
 -----
