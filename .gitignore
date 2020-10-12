@@ -3,3 +3,5 @@
 .RData
 .Ruserdata
 Scratch_Work.Rmd
+.rstudio/*
+.local/*
