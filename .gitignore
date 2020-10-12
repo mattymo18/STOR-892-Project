@@ -4,5 +4,5 @@
 .Ruserdata
 Scratch_Work.Rmd
 .rstudio/*
-.local/*git rm
+.local/*
 Source-Data/*.csv
