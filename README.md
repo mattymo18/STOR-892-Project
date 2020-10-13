@@ -8,14 +8,6 @@ This prject will use college statistics and nfl combine data to predict a player
 
 Using this model, general managers can predict incoming players value and decide who to take in the draft.
 
-Data
-----
-
-Data is taken from and analysis previously done by Sean J. Taylor found here: https://seanjtaylor.github.io/learning-the-draft/ <br />
-Specifically the cleaned dataset "training" is used in this analysis. 
-
-
-
 USAGE
 -----
 You'll need Docker and the ability to run Docker as your current user.
@@ -30,3 +22,12 @@ This Docker container is based on rocker/verse. To run rstudio server:
       -e PASSWORD=mypass -t proj-892-env
       
 Then connect to the machine on port 8787.
+
+Data
+----
+
+Data is taken from and analysis previously done by Sean J. Taylor found here: https://seanjtaylor.github.io/learning-the-draft/ <br />
+Specifically the cleaned dataset "training" is used in this analysis. 
+
+
+

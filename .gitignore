@@ -6,3 +6,4 @@ Scratch_Work.Rmd
 .rstudio/*
 .local/*
 Source-Data/*.csv
+derived_data/*.csv
