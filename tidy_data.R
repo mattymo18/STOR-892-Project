@@ -62,6 +62,17 @@ DB.DF <- DF.Def %>%
 
 Full.DF <- rbind(DB.DF, DLine.DF, LB.DF, FB.DF, TE.DF, RB.DF, WR.DF, QB.DF, OLine.DF)
 
+combine.data <- read.csv("Source-Data/combine.csv") %>% 
+  select(nameFull, heightInches, weight, ageAtDraft, combine40yd, combineShuttle, combineVert, combineBench, combine3cone, combineBroad) %>% 
+  rename("player" = nameFull)
+Full.DF = Full.DF %>% 
+  select(-c(bench, broad, forty, threecone, shuttle, vertical))
+DF.join <- na.omit(left_join(na.omit(combine.data), Full.DF))
+
+DF.Final = DF.join %>% 
+  arrange(desc(carav)) %>% 
+  filter(pos != "QB")
+
 write.csv(OLine.DF, "derived_data/OLine.csv")
 write.csv(QB.DF, "derived_data/QB.csv")
 write.csv(TE.DF, "derived_data/TE.csv")
@@ -72,3 +83,4 @@ write.csv(LB.DF, "derived_data/LB.csv")
 write.csv(DLine.DF, "derived_data/DLine.csv")
 write.csv(DB.DF, "derived_data/DB.csv")
 write.csv(Full.DF, "derived_data/Full.DF.csv")
+write.csv(DF.Final, "derived_data/Final_Data.csv")

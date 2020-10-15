@@ -4,7 +4,7 @@ NFL Draft Analysis
 Introduction
 ------------
 
-This prject will use college statistics and nfl combine data to predict a players career added value statistic. This statistics is taken from pro-football-reference.com and is useful for assesing a players career regardless of the position played. This single number takes all contributions made by the player into account, the higher career added value a player has the better they were during their entire career in the NFL.
+This project will use nfl combine results to predict a players Career Added Value statistic. This statistics is taken from pro-football-reference.com and is useful for assesing a players career regardless of the position played. This single number takes all contributions made by the player into account, the higher career added value a player has the better they were during their entire career in the NFL.
 
 Using this model, general managers can predict incoming players value and decide who to take in the draft.
 
@@ -26,8 +26,8 @@ Then connect to the machine on port 8787.
 Data
 ----
 
-Data is taken from and analysis previously done by Sean J. Taylor found here: https://seanjtaylor.github.io/learning-the-draft/ <br />
-Specifically the cleaned dataset "training" is used in this analysis. 
+Data is taken from https://www.pro-football-reference.com <br />
+Specifically, the variables of interest were Career Added Value and combine results .
 
 
 

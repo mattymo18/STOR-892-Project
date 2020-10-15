@@ -15,6 +15,7 @@ derived_data/DLine.csv\
 derived_data/DB.csv\
 derived_data/Defense.csv\
 derived_data/Full.DF.csv\
+derived_data/Final_Data.csv\
 derived_data/Offense.csv: Source-Data/Final.csv\
  tidy_data.R
 	Rscript tidy_data.R
