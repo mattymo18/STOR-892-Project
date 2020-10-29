@@ -68,10 +68,29 @@ combine.data <- read.csv("Source-Data/combine.csv") %>%
 Full.DF = Full.DF %>% 
   select(-c(bench, broad, forty, threecone, shuttle, vertical))
 DF.join <- na.omit(left_join(na.omit(combine.data), Full.DF))
+DF.join <- DF.join[!duplicated(DF.join$player), ]
 
 DF.Final = DF.join %>% 
   arrange(desc(carav)) %>% 
-  filter(pos != "QB")
+  filter(pos != "QB" & pos != "FB")
+
+for (i in 1:nrow(DF.Final)) {
+  if (DF.Final$pos[i] == "CB" | DF.Final$pos[i] == "S") {
+    DF.Final$position[i] = "DB"
+  } else if (DF.Final$pos[i] == "C" | DF.Final$pos[i] == "G" | DF.Final$pos[i] == "T" | DF.Final$pos[i] == "OL") {
+    DF.Final$position[i] = "OLine"
+  } else if (DF.Final$pos[i] == "DE" | DF.Final$pos[i] == "DT" | DF.Final$pos[i] == "NT"){
+    DF.Final$position[i] = "DLine"
+  } else if (DF.Final$pos[i] == "ILB" | DF.Final$pos[i] == "OLB") {
+    DF.Final$position[i] = "LB"
+  } else {
+    DF.Final$position[i] = as.character(DF.Final$pos[i])
+  }
+}
+
+DF.Final$Type <- factor(ifelse(DF.Final$position == "OLine" | DF.Final$position == "DLine", 1,
+                               ifelse(DF.Final$position == "LB" | DF.Final$position == "TE", 2, 3)))
+#this will mean 1 is big strong players, 2 is mixed, 3 is skill
 
 write.csv(OLine.DF, "derived_data/OLine.csv")
 write.csv(QB.DF, "derived_data/QB.csv")

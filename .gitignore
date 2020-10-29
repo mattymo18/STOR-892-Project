@@ -7,3 +7,4 @@ Scratch_Work.Rmd
 .local/*
 Source-Data/*.csv
 derived_data/*.csv
+derived_graphs/*.png

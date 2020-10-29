@@ -27,7 +27,7 @@ Data
 ----
 
 Data is taken from https://www.pro-football-reference.com <br />
-Specifically, the variables of interest were Career Added Value and combine results .
+Specifically, the variables of interest were Career Added Value and combine results. Kickers, Quaterbacks, Longsnappers, and Punters were not included in this analysis.
 
 
 

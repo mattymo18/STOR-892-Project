@@ -4,6 +4,12 @@ clean:
 				rm derived_data/*
 				
 
+derived_graphs/PCA.Plot.png\
+derived_graphs/TSNE.Plot.png:\
+ derived_data/Final_Data.csv\
+ Cluster_Data.R
+	Rscript Cluster_Data.R
+
 derived_data/OLine.csv\
 derived_data/QB.csv\
 derived_data/TE.csv\
