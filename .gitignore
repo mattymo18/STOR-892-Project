@@ -3,6 +3,7 @@
 .RData
 .Ruserdata
 Scratch_Work.Rmd
+Scratch_Work.html
 .rstudio/*
 .local/*
 Source-Data/*.csv
