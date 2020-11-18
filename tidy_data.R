@@ -92,6 +92,9 @@ DF.Final$Type <- factor(ifelse(DF.Final$position == "OLine" | DF.Final$position 
                                ifelse(DF.Final$position == "LB" | DF.Final$position == "TE", 2, 3)))
 #this will mean 1 is big strong players, 2 is mixed, 3 is skill
 
+DF.Final = DF.Final %>% 
+  mutate("carav.scale" = carav/3)
+
 write.csv(OLine.DF, "derived_data/OLine.csv")
 write.csv(QB.DF, "derived_data/QB.csv")
 write.csv(TE.DF, "derived_data/TE.csv")

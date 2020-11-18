@@ -4,10 +4,24 @@ clean:
 				rm derived_data/*
 				
 
+models/rf.model.rds\
+derived_graphs/Var.Imp.rf.plot.png:\
+ derived_data/Final_Data.csv\
+ rf.model.R
+	Rscript rf.model.R
+
+derived_graphs/Offense.Scatter.Lab.png\
+derived_graphs/Offense.Scatter.NoLab.png:\
+ derived_data/Offense.csv\
+ derived_data/Defense.csv\
+ tidy_graphs.R
+	Rscript tidy_graphs.R
+
+
 derived_graphs/PCA.Plot.png\
 derived_graphs/TSNE.Plot.png:\
  derived_data/Final_Data.csv\
- Cluster_Data.R
+ Cluster_Data.Rq
 	Rscript Cluster_Data.R
 
 derived_data/OLine.csv\

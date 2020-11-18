@@ -8,3 +8,4 @@ Scratch_Work.Rmd
 Source-Data/*.csv
 derived_data/*.csv
 derived_graphs/*.png
+models/*.rds
